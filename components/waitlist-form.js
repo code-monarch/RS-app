@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
 
 const WaitlistForm = ({ toggleModal }) => {
-  const [value, setValue] = useState(0);
   return (
     <View style={styles.form}>
       <Text variant='headlineMedium'> Join Waitlist </Text>
@@ -60,6 +59,7 @@ const WaitlistForm = ({ toggleModal }) => {
         <Button
           onPress={() => toggleModal()}
           style={styles.CTA}
+          
           textColor='#fff'
         >
           Submit
@@ -77,6 +77,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 20,
+    paddingTop: 40,
+    paddingBottom: 30,
   },
   formItems: {
     display: "flex",

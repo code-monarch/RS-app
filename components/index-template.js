@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Modal from "react-native-modal";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, ScrollView, StyleSheet, View } from "react-native";
 import { Text, Button } from "react-native-paper";
 import BrandIcon from "../assets/rubis-service-brand-icon.png";
 import WaitlistForm from "./waitlist-form";
 
 const IndexTemplate = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
   };
@@ -27,16 +28,26 @@ const IndexTemplate = () => {
         </View>
       </View>
 
-      {/* Join Waitlist */}
+      {/* Join Wait list */}
       <View>
         <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
-          Click Here To Join Waitlist
+          Click Here To Join Wait list
         </Button>
 
         {/* Modal */}
-        <Modal isVisible={isModalVisible} style={styles.modal}>
-          <View>
-            <WaitlistForm toggleModal={toggleModal} />
+        <Modal
+          isVisible={isModalVisible}
+          onBackButtonPress={() => setIsModalVisible(false)}
+          // onBackdropPress={() => setIsModalVisible(false)}
+          onSwipeComplete={() => setIsModalVisible(false)}
+          style={styles.modal}
+        >
+          <View style={{ flex: 1 }}>
+            <ScrollView
+              scrollEventThrottle={16}
+            >
+              <WaitlistForm toggleModal={toggleModal} />
+            </ScrollView>
           </View>
         </Modal>
       </View>
@@ -85,12 +96,11 @@ const styles = StyleSheet.create({
   },
   modal: {
     backgroundColor: "#fff",
-    height: "100px",
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
-    padding: 25,
+    paddingVertical: 30,
+    paddingHorizontal: 20,
     shadowColor: "#000",
   },
 });

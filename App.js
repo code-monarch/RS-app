@@ -9,6 +9,11 @@ const theme = {
   // Specify custom property in nested object
   colors: {
     ...DefaultTheme.colors,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: "#5B5B00",
+      secondary: "#5980BF",
+    },
   },
 };
 
