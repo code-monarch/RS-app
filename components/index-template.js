@@ -43,9 +43,7 @@ const IndexTemplate = () => {
           style={styles.modal}
         >
           <View style={{ flex: 1 }}>
-            <ScrollView
-              scrollEventThrottle={16}
-            >
+            <ScrollView scrollEventThrottle={16}>
               <WaitlistForm toggleModal={toggleModal} />
             </ScrollView>
           </View>
