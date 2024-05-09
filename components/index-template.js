@@ -1,9 +1,7 @@
 import { useState } from "react";
-import Modal from "react-native-modal";
-import { Image, ScrollView, StyleSheet, View } from "react-native";
-import { Text, TextInput, Button } from "react-native-paper";
-import BrandIcon from "./assets/rubis-service-brand-icon.png";
-import WaitlistForm from "./waitlist-form";
+import { Image, StyleSheet, View } from "react-native";
+import { Text } from "react-native-paper";
+import BrandIcon from "../assets/rubis-service-brand-icon.png";
 
 const IndexTemplate = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -27,28 +25,6 @@ const IndexTemplate = () => {
           <Text style={styles.subHeader}>Coming Soon!</Text>
         </View>
       </View>
-
-      {/* Join Wait list */}
-      <View>
-        <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
-          Click Here To Join Wait list
-        </Button>
-
-        {/* Modal */}
-        <Modal
-          isVisible={isModalVisible}
-          onBackButtonPress={() => setIsModalVisible(false)}
-          // onBackdropPress={() => setIsModalVisible(false)}
-          onSwipeComplete={() => setIsModalVisible(false)}
-          style={styles.modal}
-        >
-          <View style={{ flex: 1 }}>
-            <ScrollView scrollEventThrottle={16}>
-              <WaitlistForm toggleModal={toggleModal} />
-            </ScrollView>
-          </View>
-        </Modal>
-      </View>
     </View>
   );
 };
@@ -57,11 +33,9 @@ export default IndexTemplate;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    gap: 30,
   },
   main: {
     display: "flex",
@@ -78,27 +52,10 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "hsl(242, 100%, 32%)",
-    marginTop: "20px",
     fontSize: 30,
-    marginBottom: "200px",
   },
   subHeader: {
     color: "#000",
-    marginTop: "20px",
     fontSize: 18,
-  },
-  CTA: {
-    color: "#fff",
-    backgroundColor: "hsl(211, 50%, 63%)",
-    borderRadius: 30,
-  },
-  modal: {
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 20,
-    paddingVertical: 30,
-    paddingHorizontal: 20,
-    shadowColor: "#000",
-  },
+  }
 });
