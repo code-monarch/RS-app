@@ -11,9 +11,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "sdkVersion": "51.0.0", // before was 25.0.0
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
