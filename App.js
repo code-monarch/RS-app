@@ -11,7 +11,7 @@ const App = () => {
       <PaperProvider>
         <View style={styles.container}>
           <IndexTemplate />
-          <JoinWaitlist />
+          {/* <JoinWaitlist /> */}
         </View>
       </PaperProvider>
     </>
