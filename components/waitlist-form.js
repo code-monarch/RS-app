@@ -1,5 +1,5 @@
-import { View, StyleSheet } from "react-native";
-import { Text, TextInput, Button } from "react-native-paper";
+import { View, StyleSheet, Pressable } from "react-native";
+import { TextInput, Text, Button } from "react-native-paper";
 
 const WaitlistForm = ({ toggleModal }) => {
   return (
@@ -54,16 +54,11 @@ const WaitlistForm = ({ toggleModal }) => {
       </View>
 
       {/* Submit */}
-      <View style={{width: "100%" }}>
-        <Button
-          onPress={() => toggleModal()}
-          style={styles.CTA}
-          
-          textColor='#fff'
-        >
+      <Pressable style={{ width: "100%" }} onPress={toggleModal}>
+        <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
           Submit
         </Button>
-      </View>
+      </Pressable>
     </View>
   );
 };

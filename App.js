@@ -2,17 +2,19 @@ import {
   PaperProvider,
 } from "react-native-paper";
 import IndexTemplate from "./components/index-template";
-import { StyleSheet, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import JoinWaitlist from "./components/join-waitlist";
 
 const App = () => {
   return (
     <>
       <PaperProvider>
-        <View style={styles.container}>
-          <IndexTemplate />
-          {/* <JoinWaitlist /> */}
-        </View>
+        {/* <SafeAreaView style={styles.fill}> */}
+          <View style={styles.container}>
+            <IndexTemplate />
+            <JoinWaitlist />
+          </View>
+        {/* </SafeAreaView> */}
       </PaperProvider>
     </>
   );
@@ -27,5 +29,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 30,
+  },
+  fill: {
+    flex: 1,
   },
 });

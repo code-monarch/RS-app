@@ -1,14 +1,8 @@
-import { useState } from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 import BrandIcon from "../assets/rubis-service-brand-icon.png";
 
 const IndexTemplate = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
-  };
   return (
     <View style={styles.container}>
       <View style={styles.main}>

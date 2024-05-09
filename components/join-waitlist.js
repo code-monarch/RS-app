@@ -1,32 +1,36 @@
 import { useState } from "react";
-import { Button } from "react-native-paper";
+import { Button, Text } from "react-native-paper";
 import WaitlistForm from "./waitlist-form";
-import { ScrollView, StyleSheet, View } from "react-native";
-import Modal from "react-native-modal";
+import { ScrollView, StyleSheet, View, Modal, Pressable } from "react-native";
 
 const JoinWaitlist = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
+  const show = () => {
+    setIsModalVisible(true);
+  };
+  const hide = () => {
+    setIsModalVisible(false);
   };
   return (
     <View>
-      <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
-        Click Here To Join Wait list
+      <Button onPress={show} style={styles.CTA} textColor='#fff'>
+        Join wait list
       </Button>
-
       {/* Modal */}
       <Modal
-        isVisible={isModalVisible}
-        onBackButtonPress={() => setIsModalVisible(false)}
-        // onBackdropPress={() => setIsModalVisible(false)}
-        onSwipeComplete={() => setIsModalVisible(false)}
+        visible={isModalVisible}
+        animationType='slide'
+        onRequestClose={hide}
+        transparent
         style={styles.modal}
       >
-        <View style={{ flex: 1 }}>
+        <Pressable
+          style={{ height: 100, backgroundColor: "#DDD", opacity: 0.5 }}
+        />
+        <View style={styles.main}>
           <ScrollView scrollEventThrottle={16}>
-            <WaitlistForm toggleModal={toggleModal} />
+            <WaitlistForm toggleModal={hide} />
           </ScrollView>
         </View>
       </Modal>
@@ -44,11 +48,17 @@ const styles = StyleSheet.create({
   },
   modal: {
     backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
     borderRadius: 20,
     paddingVertical: 30,
     paddingHorizontal: 20,
     shadowColor: "#000",
+  },
+  fill: {
+    flex: 1,
+  },
+  main: {
+    paddingVertical: 30,
+    paddingHorizontal: 20,
+    backgroundColor: "white",
   },
 });
