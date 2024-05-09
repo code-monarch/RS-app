@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Modal from "react-native-modal";
 import { Image, ScrollView, StyleSheet, View } from "react-native";
-import { Text, Button } from "react-native-paper";
-import BrandIcon from "../assets/rubis-service-brand-icon.png";
+import { Text, TextInput, Button } from "react-native-paper";
+import BrandIcon from "./assets/rubis-service-brand-icon.png";
 import WaitlistForm from "./waitlist-form";
 
 const IndexTemplate = () => {
