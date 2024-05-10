@@ -26,6 +26,7 @@ const JoinWaitlist = () => {
         style={styles.modal}
       >
         <Pressable
+          onPress={hide}
           style={{ height: 100, backgroundColor: "#DDD", opacity: 0.5 }}
         />
         <View style={styles.main}>
