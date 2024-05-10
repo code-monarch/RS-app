@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "hsl(242, 100%, 32%)",
-    fontSize: 30,
+    fontSize: 25,
   },
   subHeader: {
     color: "#000",
