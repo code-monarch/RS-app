@@ -1,10 +1,10 @@
 import { View, StyleSheet, Pressable } from "react-native";
 import { TextInput, Text, Button } from "react-native-paper";
 
-const WaitlistForm = ({ toggleModal }) => {
+const RegisterForm = ({ toggleModal }) => {
   return (
     <View style={styles.form}>
-      <Text variant='headlineMedium'> Join Waitlist </Text>
+      <Text variant='headlineMedium'> Register </Text>
       <View style={styles.formItems}>
         <TextInput
           mode='outlined'
@@ -18,7 +18,7 @@ const WaitlistForm = ({ toggleModal }) => {
         <TextInput
           mode='outlined'
           label='Are you a Service provider/Vendor'
-          //   placeholder='Provider'
+            placeholder='Yes/No'
           textColor='#000'
           outlineColor='#000'
           activeOutlineColor='#000'
@@ -56,14 +56,14 @@ const WaitlistForm = ({ toggleModal }) => {
       {/* Submit */}
       <Pressable style={{ width: "100%" }} onPress={toggleModal}>
         <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
-          Submit
+          Register
         </Button>
       </Pressable>
     </View>
   );
 };
 
-export default WaitlistForm;
+export default RegisterForm;
 
 const styles = StyleSheet.create({
   form: {

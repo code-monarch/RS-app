@@ -16,7 +16,9 @@ const IndexTemplate = () => {
         />
         <View style={styles.header}>
           <Text style={styles.heading}>Rubis Services</Text>
-          <Text style={styles.subHeader}>Coming Soon!</Text>
+          <Text style={styles.subHeader}>
+            Your Trusted Tech Hub for Professional Cleaning Services
+          </Text>
         </View>
       </View>
     </View>
@@ -36,6 +38,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
+    paddingHorizontal: 40,
   },
   header: {
     width: "100%",
@@ -43,6 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    gap: 8,
   },
   heading: {
     color: "hsl(242, 100%, 32%)",
@@ -50,6 +54,7 @@ const styles = StyleSheet.create({
   },
   subHeader: {
     color: "#000",
-    fontSize: 18,
-  }
+    fontSize: 14,
+    textAlign: "center",
+  },
 });

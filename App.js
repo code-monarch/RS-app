@@ -3,7 +3,7 @@ import {
 } from "react-native-paper";
 import IndexTemplate from "./components/index-template";
 import { StyleSheet, View } from "react-native";
-import JoinWaitlist from "./components/join-waitlist";
+import Register from "./components/register";
 
 const theme = {
   ...DefaultTheme,
@@ -20,7 +20,7 @@ const App = () => {
       <PaperProvider theme={theme}>
         <View style={styles.container}>
           <IndexTemplate />
-          <JoinWaitlist />
+          <Register />
         </View>
       </PaperProvider>
     </>

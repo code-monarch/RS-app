@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button, Text } from "react-native-paper";
-import WaitlistForm from "./waitlist-form";
+import WaitlistForm from "./register-form";
 import { ScrollView, StyleSheet, View, Modal, Pressable } from "react-native";
 
-const JoinWaitlist = () => {
+const Register = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const show = () => {
@@ -15,7 +15,7 @@ const JoinWaitlist = () => {
   return (
     <View>
       <Button onPress={show} style={styles.CTA} textColor='#fff'>
-        Join wait list
+        Register
       </Button>
       {/* Modal */}
       <Modal
@@ -39,10 +39,11 @@ const JoinWaitlist = () => {
   );
 };
 
-export default JoinWaitlist;
+export default Register;
 
 const styles = StyleSheet.create({
   CTA: {
+    paddingHorizontal: 20,
     color: "#fff",
     backgroundColor: "hsl(211, 50%, 63%)",
     borderRadius: 30,
