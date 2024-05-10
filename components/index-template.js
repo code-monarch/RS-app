@@ -11,8 +11,8 @@ const IndexTemplate = () => {
           style={{
             width: 80,
             height: 80,
-            resizeMode: "contain",
           }}
+          resizeMode='contain'
         />
         <View style={styles.header}>
           <Text style={styles.heading}>Rubis Services</Text>

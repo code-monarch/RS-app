@@ -1,4 +1,4 @@
-import { Provider as PaperProvider } from "react-native-paper";
+import { PaperProvider } from "react-native-paper";
 import IndexTemplate from "./components/index-template";
 import { StyleSheet, View } from "react-native";
 import JoinWaitlist from "./components/join-waitlist";
