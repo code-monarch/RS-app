@@ -1,5 +1,6 @@
 import { View, StyleSheet, Pressable } from "react-native";
 import { TextInput, Text, Button } from "react-native-paper";
+import Dropdown from "./dropdown";
 
 const RegisterForm = ({ toggleModal }) => {
   return (
@@ -15,15 +16,15 @@ const RegisterForm = ({ toggleModal }) => {
           activeOutlineColor='#000'
           style={{ width: "100%" }}
         />
-        <TextInput
+        {/* <TextInput
           mode='outlined'
           label='Are you a Service provider/Vendor'
-            placeholder='Yes/No'
+          placeholder='Yes/No'
           textColor='#000'
           outlineColor='#000'
           activeOutlineColor='#000'
           style={{ width: "100%" }}
-        />
+        /> */}
         <TextInput
           mode='outlined'
           label='Email Address'
@@ -51,6 +52,7 @@ const RegisterForm = ({ toggleModal }) => {
           activeOutlineColor='#000'
           style={{ width: "100%" }}
         />
+        <Dropdown />
       </View>
 
       {/* Submit */}
