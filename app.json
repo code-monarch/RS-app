@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -29,6 +31,8 @@
       "eas": {
         "projectId": "6ddb025c-0a07-4295-a4ee-d32b1ed8ad90"
       }
-    }
-  }
+    },
+    "sdkVersion": "51.0.0"
+  },
+  "name": "rs-app"
 }

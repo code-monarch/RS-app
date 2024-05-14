@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Text } from "react-native-paper";
+import { Button } from "react-native-paper";
 import WaitlistForm from "./register-form";
 import { ScrollView, StyleSheet, View, Modal, Pressable } from "react-native";
 

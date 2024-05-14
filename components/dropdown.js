@@ -1,10 +1,11 @@
+"use client"
+import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { Picker } from "@react-native-picker/picker";
 import { useTheme } from "react-native-paper";
 
 const Dropdown = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState("user");
   const theme = useTheme();
 
   return (
@@ -12,7 +13,6 @@ const Dropdown = () => {
       <Picker
         selectedValue={user}
         onValueChange={(itemValue, itemIndex) => setUser(itemValue)}
-        label='Are you a Service provider/Vendor'
         style={{
           backgroundColor: theme.colors.background,
           color: theme.colors.inverseSurface,
