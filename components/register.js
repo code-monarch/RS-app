@@ -55,12 +55,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     shadowColor: "#000",
   },
-  fill: {
-    flex: 1,
-  },
   main: {
     paddingVertical: 30,
     paddingHorizontal: 20,
-    backgroundColor: "white",
+    backgroundColor: "#fff",
   },
 });
