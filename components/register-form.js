@@ -1,4 +1,4 @@
-import { View, StyleSheet, Pressable } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { TextInput, Text, Button } from "react-native-paper";
 import Dropdown from "./dropdown";
 
@@ -56,11 +56,9 @@ const RegisterForm = ({ toggleModal }) => {
       </View>
 
       {/* Submit */}
-      <Pressable style={{ width: "100%" }} onPress={toggleModal}>
-        <Button onPress={toggleModal} style={styles.CTA} textColor='#fff'>
+        <Button onPress={()=>toggleModal()} style={styles.CTA} textColor='#fff'>
           Register
         </Button>
-      </Pressable>
     </View>
   );
 };

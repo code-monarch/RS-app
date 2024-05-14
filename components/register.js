@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-native-paper";
-import WaitlistForm from "./register-form";
+import RegisterForm from "./register-form";
 import { ScrollView, StyleSheet, View, Modal, Pressable } from "react-native";
 
 const Register = () => {
@@ -31,7 +31,7 @@ const Register = () => {
         />
         <View style={styles.main}>
           <ScrollView scrollEventThrottle={16}>
-            <WaitlistForm toggleModal={hide} />
+            <RegisterForm toggleModal={hide} />
           </ScrollView>
         </View>
       </Modal>
