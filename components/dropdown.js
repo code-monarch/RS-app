@@ -20,6 +20,7 @@ const Dropdown = () => {
       >
         <Picker.Item label='Service provider' value='provider' />
         <Picker.Item label='User' value='user' />
+        
       </Picker>
     </View>
   );
